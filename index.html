@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Khanza!</title>
+    <style>
+        body {
+            background-color: #ffecf2;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff4081;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #333;
+            font-size: 1.2rem;
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+        .button {
+            background-color: #ff4081;
+            color: white;
+            font-size: 1.2rem;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 64, 129, 0.4);
+        }
+        .hidden-message {
+            display: none;
+            color: #4CAF50;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Semangat Yaa Sayanggg Upraknyaa!!</h1>
+    <p>Aku tau kamu pasti bisaa, percaya diri, dan berikan usaha terbaik yaa!</p>
+    <button class="button" onclick="showMessage()">Extra Motivasi (klik terus)</button>
+    <p id="message" class="hidden-message"></p>
+    
+    <script>
+        const messages = [
+            "Kamu udah siap, lakukan yang terbaik!",
+            "Tenang dan fokus, kamu pasti bisa",
+            "Jangan takut, semua pasti berjalan lancar",
+            "Percaya diri, Khanza! Aku percaya kamu :)",
+            "Jangan ragu, kamu pasti bisaa!",
+            "Kamu tidak sendiri, banyak yang mendukung kamu!",
+            "Bangga sama diri kamu sendiri, karena kamu hebatt"
+        ];
+        
+        function showMessage() {
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            document.getElementById('message').textContent = messages[randomIndex];
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
